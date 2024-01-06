@@ -1,0 +1,21 @@
+//ページネーション、検索機能、およびCRUD操作（作成、読み取り、更新、削除）を実装
+
+package com.example.shortcut.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.example.shortcut.model.Shortcut;
+
+
+
+@Repository
+public interface ShortcutRepository extends JpaRepository<Shortcut, Long> {
+    // ショートカットの検索機能
+    @Query("SELECT s FROM Shortcut s WHERE " +
+           "LOWER(s.name) LIKE LOWER(CONCAT('%', :searchTerm, '%')) OR " +
+           "LOWER(s.content) LIKE LOWER(CONCAT('%', :searchTerm, '%')) OR " +
+           "LOWER(s.command) LIKE LOWER(CONCAT('%', :searchTerm, '%'))")
+    Page<Shortcut> search(String searchTerm, Pageable pageable);
+}

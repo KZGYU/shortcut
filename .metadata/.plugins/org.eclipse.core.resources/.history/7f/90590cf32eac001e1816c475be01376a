@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ショートカット一覧集</title>
+<link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+</head>
+<body>
+	
+
+</body>
+</html>

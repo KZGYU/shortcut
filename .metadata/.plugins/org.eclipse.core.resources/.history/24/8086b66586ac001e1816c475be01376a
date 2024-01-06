@@ -1,0 +1,47 @@
+package com.example.shortcut.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.shortcut.service.ShortcutService;
+
+@Controller
+public class ShortcutController {
+	
+    @Autowired//Spring Frameworkの依存性注入（Dependency Injection）機能
+    private ShortcutService shortcutService;
+
+	@GetMapping("/")
+	public String index() {
+		return "index";
+	}
+
+	@GetMapping("/shortcuts")
+	public String shortcuts() {
+		return "shortcuts";
+	}
+
+	@GetMapping("/eclipseShortcuts")
+	public String viewShortcutPage(Model model,
+			@RequestParam(name="keyword",required=false) String keywoed,
+			
+			) {
+		return "eclipseShortcuts";
+	}
+
+	@GetMapping("/eclipseQuiz")
+	public String eclipseQuiz() {
+		return "eclipseQuiz";
+	}
+
+	@GetMapping("/excelShortcuts")
+	public String excelShortcuts() {
+		return "excelShortcuts";
+	}
+
+	@GetMapping("/excelQuiz")
+	public String excelQuiz() {
+		return "excelQuiz";
+	}
+}

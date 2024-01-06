@@ -1,0 +1,20 @@
+package com.example.shortcut.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.shortcut.repository.ShortcutRepository;
+
+public class ShortcutService {
+	
+	@Autowired
+	private ShortcutRepository shortcutRepository;
+	
+	//ショートカットのページネーションと検索
+	//keywordは検索用の文字列、pageはページ番号、sizeは1ページあたりのアイテム数
+	public Page<Shortcut>listAll(String,keyword,int page,int size){
+		
+	}
+	
+	
+
+}

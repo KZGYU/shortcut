@@ -1,0 +1,11 @@
+package com.example.shortcut.controller;
+
+
+@controller
+public class ShortcutController {
+	@GetMapping("/")
+	public String index() {
+		return "index";
+	}
+
+}

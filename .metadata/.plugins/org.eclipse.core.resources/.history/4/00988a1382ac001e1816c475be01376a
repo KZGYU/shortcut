@@ -1,0 +1,5 @@
+package com.example.shortcut.repository;
+
+public class ShortcutRepository {
+
+}

@@ -1,0 +1,23 @@
+package com.example.shortcut.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class ShortcutController {
+	@GetMapping("/")
+	public String index() {
+		return "index";
+	}
+	
+    @GetMapping("/shortcuts")
+    public String shortcuts() {
+        return "shortcuts";
+    }
+
+    @GetMapping("/quiz")
+    public String quiz() {
+        return "quiz";
+    }
+
+}

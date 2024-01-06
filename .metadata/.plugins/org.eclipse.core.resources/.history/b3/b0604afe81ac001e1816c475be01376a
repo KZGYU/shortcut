@@ -1,0 +1,11 @@
+package com.example.shortcut.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+
+//リポジトリの設定
+@Repository
+public interface service extends JpaRepository<Shortcut,Long>{
+
+}

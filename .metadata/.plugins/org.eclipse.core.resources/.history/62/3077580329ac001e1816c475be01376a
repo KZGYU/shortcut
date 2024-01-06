@@ -1,0 +1,1 @@
+INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (1, 'COPY', '文字を写す', 'Ctrl＋C');
