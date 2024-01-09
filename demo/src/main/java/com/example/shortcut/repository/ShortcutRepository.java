@@ -4,11 +4,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
 
 import com.example.shortcut.model.Shortcut;
 
-@Repository
 public interface ShortcutRepository extends JpaRepository<Shortcut, Long> {
     // ショートカットの検索機能
     // カスタムクエリを使用して、名前、内容、またはコマンドに基づいてショートカットを検索します。

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>新規ショートカット追加</title>
+</head>
+<body>
+    <h1>新規ショートカット追加</h1>
+    <form th:action="@{/shortcuts/add}" method="post">
+        <p>名前: <input type="text" name="name" /></p>
+        <p>内容: <input type="text" name="content" /></p>
+        <p>コマンド: <input type="text" name="command" /></p>
+        <p><button type="submit">追加</button></p>
+    </form>
+</body>
+</html>

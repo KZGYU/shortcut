@@ -20,7 +20,7 @@ import jakarta.persistence.Table;
 public class Shortcut {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//新しいエンティティがデータベースに保存される際に、IDが自動的に生成
     private Long id;
 
     @Column(name = "name") // データベースのカラム名を指定
