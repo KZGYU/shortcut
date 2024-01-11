@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;modify.sql&apos; to &apos;demo/src/main/resources&apos;&#x0D;&#x0A;- 元のプロジェクト: &apos;demo&apos;&#x0D;&#x0A;- 宛先要素: &apos;demo/src/main/resources&apos;&#x0D;&#x0A;- オリジナル要素: &apos;modify.sql&apos;&#x0D;&#x0A;- リファクタリングされた要素の参照を更新" description="ファイルを移動する" destination="/src\/main\/resources=/maven.pomderived=/true=/=/optional=/true=/" element1="src/main/resources/templates/modify.sql" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1704963939281" units="0" version="1.0"/>
+</session>

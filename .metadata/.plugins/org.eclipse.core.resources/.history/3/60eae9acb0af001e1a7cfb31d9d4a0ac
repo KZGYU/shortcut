@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Eclipseショートカット一覧</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+</head>
+
+<body>
+	<h1>Eclipseショートカット一覧</h1>
+
+	<!-- 追加ボタン -->
+	<button onclick="location.href='/shortcuts/new'">新規追加</button>
+
+
+	<!-- 検索フォーム -->
+	<form action="#" th:action="@{/eclipseShortcuts}" method="get">
+		<input type="text" name="keyword" th:value="${keyword}" placeholder="検索">
+		<button type="submit">検索</button>
+	</form>
+
+	<!-- ショートカット一覧 -->
+	<table>
+		<!-- テーブルヘッダ -->
+		<tr>
+			<th>ID</th>
+			<th>名前</th>
+			<th>内容</th>
+			<th>コマンド</th>
+		</tr>
+		<!-- テーブルの各行 -->
+		<tr th:each="shortcut : ${listShortcuts}">
+			<td th:text="${shortcut.id}"></td>
+			<td th:text="${shortcut.name}"></td>
+			<td th:text="${shortcut.content}"></td>
+			<td th:text="${shortcut.command}"></td>
+			<td>
+				<!-- 更新ボタン -->
+				<button th:onclick="'location.href=\'/shortcuts/edit?id=' + ${shortcut.id} + '\''">更新</button>
+				<!-- 削除ボタン -->
+				<button th:onclick="'location.href=\'/shortcuts/delete?id=' + ${shortcut.id} + '\''">削除</button>
+
+			</td>
+		</tr>
+	</table>
+
+	<!-- ページネーション -->
+	<div>
+		<!-- 前のページへのリンク -->
+		<a th:if="${listShortcuts.hasPrevious()}"
+			th:href="@{/eclipseShortcuts(page=${listShortcuts.number - 1}, size=${listShortcuts.size}, keyword=${keyword})}">前</a>
+		<!-- 現在のページ番号と総ページ数 -->
+		<span th:text="${listShortcuts.number + 1} + '/' + ${listShortcuts.totalPages}"></span>
+		<!-- 次のページへのリンク -->
+		<a th:if="${listShortcuts.hasNext()}"
+			th:href="@{/eclipseShortcuts(page=${listShortcuts.number + 1}, size=${listShortcuts.size}, keyword=${keyword})}">次</a>
+	</div>
+</body>
+
+</html>
