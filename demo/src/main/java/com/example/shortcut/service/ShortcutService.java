@@ -41,4 +41,5 @@ public class ShortcutService {
 		return shortcutRepository.findAll(PageRequest.of(page, size));
 
 	}
+	
 }
