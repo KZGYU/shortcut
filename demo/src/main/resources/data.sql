@@ -1,21 +1,520 @@
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (1, '編集タブの移動', '編集タブに開いている作業中のファイルを選択するポップアップが表示され、他のファイルへ移動することができる', 'Ctrl＋E');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (2, '元の場所に戻る', '前の場所に戻る', 'Alt+←');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (3, '元の場所から進む', '次に進む', 'Alt+→');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (4, 'クイックアウトラインの表示', '現在のファイルのアウトラインをポップアップで表示する', 'Ctrl+O');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (5, 'コードのフォーマット', '選択したコードのフォーマットを整える', 'Ctrl+Shift+F');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (6, '行の削除', 'カーソルがある行を削除する', 'Ctrl+D');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (7, 'コメントの切り替え', '選択した行のコメントの切り替えを行う', 'Ctrl+/');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (8, '検索/置換', 'ドキュメント内での検索や置換を行う', 'Ctrl+F');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (9, 'リファクタリングのメニューを表示', 'リファクタリングに関連するオプションを表示する', 'Alt+Shift+T');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (10, 'プロジェクトのビルド', '選択したプロジェクトをビルドする', 'Ctrl+B');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (11, 'ファイルの保存', '現在のファイルを保存する', 'Ctrl+S');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (12, 'すべてのファイルを保存', '開いているすべてのファイルを保存する', 'Ctrl+Shift+S');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (13, '検索/置換', 'ドキュメント内での検索や置換を行う', 'Ctrl+F');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (14, 'プロジェクトのクリーン', '選択したプロジェクトのビルドをクリーンする', 'Alt+Shift+C');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (15, '新しいクラスの作成', '新しいクラスファイルを作成する', 'Alt+Shift+N, C');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (16, '新しいパッケージの作成', '新しいパッケージを作成する', 'Alt+Shift+N, P');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (17, 'エラー行に移動', '次のエラーまたは警告がある行に移動する', 'Ctrl+.');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (18, 'エラー行に戻る', '前のエラーまたは警告がある行に移動する', 'Ctrl+,');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (19, 'コードの折りたたみの切り替え', '選択したコードブロックの折りたたみを切り替える', 'Ctrl+Shift+/ (数字のスラッシュキー)');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (20, '全ての折りたたみを展開', 'すべてのコードブロックの折りたたみを展開する', 'Ctrl+Shift+\\ (バックスラッシュキー)');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (21, '対応する括弧に行き来する', '対応する括弧 ( と ) あるいは { と } を行き来できる', 'Ctrl+Shift+P');
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   1,
+   '編集タブの移動',
+   '編集タブに開いている作業中のファイルを選択するポップアップが表示され、他のファイルへ移動することができる',
+   'Ctrl＋E'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   2,
+   '元の場所に戻る',
+   '前の場所に戻る',
+   'Alt+←'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   3,
+   '元の場所から進む',
+   '次に進む',
+   'Alt+→'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   4,
+   'クイックアウトラインの表示',
+   '現在のファイルのアウトラインをポップアップで表示する',
+   'Ctrl+O'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   5,
+   'コードのフォーマット',
+   '選択したコードのフォーマットを整える',
+   'Ctrl+Shift+F'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   6,
+   '行の削除',
+   'カーソルがある行を削除する',
+   'Ctrl+D'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   7,
+   'コメントの切り替え',
+   '選択した行のコメントの切り替えを行う',
+   'Ctrl+/'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   8,
+   '検索/置換',
+   'ドキュメント内での検索や置換を行う',
+   'Ctrl+F'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   9,
+   'リファクタリングのメニューを表示',
+   'リファクタリングに関連するオプションを表示する',
+   'Alt+Shift+T'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   10,
+   'プロジェクトのビルド',
+   '選択したプロジェクトをビルドする',
+   'Ctrl+B'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   11,
+   'ファイルの保存',
+   '現在のファイルを保存する',
+   'Ctrl+S'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   12,
+   'すべてのファイルを保存',
+   '開いているすべてのファイルを保存する',
+   'Ctrl+Shift+S'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   13,
+   'プロジェクトのクリーン',
+   '選択したプロジェクトのビルドをクリーンする',
+   'Alt+Shift+C'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   14,
+   '新しいクラスの作成',
+   '新しいクラスファイルを作成する',
+   'Alt+Shift+N, C'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   15,
+   '新しいパッケージの作成',
+   '新しいパッケージを作成する',
+   'Alt+Shift+N, P'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   16,
+   'エラー行に移動',
+   '次のエラーまたは警告がある行に移動する',
+   'Ctrl+.'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   17,
+   'エラー行に戻る',
+   '前のエラーまたは警告がある行に移動する',
+   'Ctrl+,'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   18,
+   'コードの折りたたみの切り替え',
+   '選択したコードブロックの折りたたみを切り替える',
+   'Ctrl+Shift+/ (数字のスラッシュキー)'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   19,
+   '全ての折りたたみを展開',
+   'すべてのコードブロックの折りたたみを展開する',
+   'Ctrl+Shift+\\ (バックスラッシュキー)'
+);
+INSERT IGNORE INTO shortcuts
+(
+   id,
+   name,
+   content,
+   command
+)
+VALUES
+(
+   20,
+   '対応する括弧に行き来する',
+   '対応する括弧 ( と ) あるいは { と } を行き来できる',
+   'Ctrl+Shift+P'
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   1,
+   '「編集タブに開いている作業中のファイルを選択するポップアップが表示され、他のファイルへ移動することができる」この操作を行うショートカットキーは何ですか？',
+   1
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   2,
+   '「前の場所に戻る」機能を実行するショートカットキーは何ですか？',
+   2
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   3,
+   '「次に進む」機能を実行するショートカットキーは何ですか？',
+   3
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   4,
+   '「現在のファイルのアウトラインをポップアップで表示する」操作を行うショートカットキーは何ですか？',
+   4
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   5,
+   '「選択したコードのフォーマットを整える」機能を実行するショートカットキーは何ですか？',
+   5
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   6,
+   '「カーソルがある行を削除する」操作を行うショートカットキーは何ですか？',
+   6
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   7,
+   '「選択した行のコメントの切り替えを行う」機能を実行するショートカットキーは何ですか？',
+   7
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   8,
+   '「ドキュメント内での検索や置換を行う」操作を行うショートカットキーは何ですか？',
+   8
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   9,
+   '「リファクタリングに関連するオプションを表示する」機能を実行するショートカットキーは何ですか？',
+   9
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   10,
+   '「選択したプロジェクトをビルドする」操作を行うショートカットキーは何ですか？',
+   10
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   11,
+   '「現在のファイルを保存する」機能を実行するショートカットキーは何ですか？',
+   11
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   12,
+   '「開いているすべてのファイルを保存する」操作を行うショートカットキーは何ですか？',
+   12
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   13,
+   '「選択したプロジェクトのビルドをクリーンする」機能を実行するショートカットキーは何ですか？',
+   13
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   14,
+   '「新しいクラスファイルを作成する」操作を行うショートカットキーは何ですか？',
+   14
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   15,
+   '「新しいパッケージを作成する」機能を実行するショートカットキーは何ですか？',
+   15
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   16,
+   '「次のエラーまたは警告がある行に移動する」操作を行うショートカットキーは何ですか？',
+   16
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   17,
+   '「前のエラーまたは警告がある行に移動する」機能を実行するショートカットキーは何ですか？',
+   17
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   18,
+   '「選択したコードブロックの折りたたみを切り替える」操作を行うショートカットキーは何ですか？',
+   18
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   19,
+   '「すべてのコードブロックの折りたたみを展開する」機能を実行するショートカットキーは何ですか？',
+   19
+);
+INSERT IGNORE INTO questions
+(
+   id,
+   question,
+   answer_id
+)
+VALUES
+(
+   20,
+   '「対応する括弧 ( と ) あるいは { と } を行き来できる」操作を行うショートカットキーは何ですか？',
+   20
+);

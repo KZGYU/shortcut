@@ -1,6 +1,8 @@
+
 /bin/
 /Servers/
-/.metadata/
+.metadata/
+
 
 # Java
 *.class
@@ -19,23 +21,30 @@
 *.iws
 *.ipr
 
+
 # OS
 Thumbs.db
 .DS_Store
+
 
 # Gradle
 .gradle
 !gradle-wrapper.jar
 
+
 # Maven
 target
+
 
 # Build
 out
 build
 bin
 
+
 # Other
 *.log
 *.swp
 *.bak
+.metadata/.plugins/org.eclipse.core.resources/.history/10/f0cab01627b1001e1aae9788afe4ead3
+.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/demo/2024/1/2/refactorings.history
