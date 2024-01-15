@@ -1,56 +1,133 @@
 /* ボディ全体のフォント設定 */
 body {
-    font-family: Arial, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 /* 見出し1の色設定 */
 h1 {
-    color: blueviolet;
+	color: blueviolet;
 }
 
 /* ボタンの基本スタイル設定 */
 button {
-    background-color: #4caf50; /* 背景色 */
-    color: white; /* テキスト色 */
-    padding: 14px 20px; /* 内側の余白 */
-    margin: 8px 0; /* 外側の余白 */
-    border: none; /* ボーダーなし */
-    cursor: pointer; /* カーソルをポインターに */
+	background-color: #4caf50;
+	/* 背景色 */
+	color: white;
+	/* テキスト色 */
+	padding: 14px 20px;
+	/* 内側の余白 */
+	margin: 8px 0;
+	/* 外側の余白 */
+	border: none;
+	/* ボーダーなし */
+	cursor: pointer;
+	/* カーソルをポインターに */
 }
 
 /* ボタンのホバー効果 */
 button:hover {
-    opacity: 0.8; /* ホバー時の透明度変更 */
+	opacity: 0.8;
+	/* ホバー時の透明度変更 */
 }
 
 /* テーブル全体のスタイル設定 */
 table {
-    width: 100%; /* テーブルの幅を画面いっぱいに広げる */
-    border-collapse: collapse; /* セルのボーダーを重ねて表示 */
+	width: 100%;
+	/* テーブルの幅を画面いっぱいに広げる */
+	border-collapse: collapse;
+	/* セルのボーダーを重ねて表示 */
 }
 
 /* テーブル、ヘッダー（th）、セル（td）のボーダー設定 */
-table, th, td {
-    border: 1px solid black; /* 黒色の1pxのボーダーを設定 */
+table,
+th,
+td {
+	border: 1px solid black;
+	/* 黒色の1pxのボーダーを設定 */
 }
 
 /* ヘッダー（th）とセル（td）のパディングとテキストの位置設定 */
-th, td {
-    padding: 8px; /* 内側の余白（パディング）を8pxに設定 */
-    text-align: left; /* テキストを左揃えに設定 */
+th,
+td {
+	padding: 8px;
+	/* 内側の余白（パディング）を8pxに設定 */
+	text-align: left;
+	/* テキストを左揃えに設定 */
 }
 
 /* ヘッダー（th）の背景色設定 */
 th {
-    background-color: #f2f2f2; /* 薄い灰色の背景色を設定 */
+	background-color: #f2f2f2;
+	/* 薄い灰色の背景色を設定 */
 }
 
 /* 偶数行の背景色設定 */
 tr:nth-child(even) {
-    background-color: #f9f9f9; /* より薄い灰色の背景色を設定 */
+	background-color: #f9f9f9;
+	/* より薄い灰色の背景色を設定 */
 }
 
 /* マウスオーバー時の行の背景色変更 */
 tr:hover {
-    background-color: #e8e8e8; /* マウスオーバー時に背景色を変更 */
+	background-color: #e8e8e8;
+	/* マウスオーバー時に背景色を変更 */
 }
+
+.eclipsquiz-container {
+	padding: 70px;
+	margin-bottom: 10px;
+	border: 5px double #333333;
+	margin-top: 20px;
+	margin-bottom: 100px;
+
+
+}
+
+.noquiz-container {
+	padding: 10px;
+	margin: 0 auto;
+	/* 水平中央揃え */
+	background-color: #009999;
+	color: #ffffff;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+
+	/* Flexboxを使った垂直中央揃え */
+	display: flex;
+	align-items: center;
+	/* 垂直方向の中央揃え */
+	justify-content: center;
+	/* 水平方向の中央揃え */
+}
+
+.eclipsanswer-container {
+	padding: 10px;
+	margin: 0 auto;
+	/* 水平中央揃え */
+	background-color: rgb(0, 0, 160);
+	color: #ffffff;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+
+	/* Flexboxを使った垂直中央揃え */
+	display: flex;
+	align-items: center;
+	/* 垂直方向の中央揃え */
+	justify-content: center;
+	/* 水平方向の中央揃え */
+}
+
+
+.EclipsAnswerProglam-container {
+	padding: 70px;
+	margin-bottom: 10px;
+	border: 5px double #333333;
+	margin-top: 20px;
+	margin-bottom: 100px;
+
+
+
+}
+

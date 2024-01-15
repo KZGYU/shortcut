@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>クイズ結果</title>
+</head>
+<body>
+    <h1>クイズ結果</h1>
+    <p th:text="${message}"></p>
+    <div th:if="${isCorrect}">
+        <p>おめでとうございます！正解です。</p>
+    </div>
+    <div th:unless="${isCorrect}">
+        <p>残念、不正解です。</p>
+        <!-- 正解の選択肢を表示する場合はここに追加 -->
+    </div>
+
+    <!-- クイズページへのリンクなど、必要に応じて追加 -->
+    <a href="/eclipseQuiz">もう一度挑戦する</a>
+</body>
+</html>
