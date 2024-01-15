@@ -1,8 +1,9 @@
 package com.example.shortcut.controller;
 
+import java.util.Collections;
+import java.util.List;
+
 import org.aspectj.weaver.patterns.TypePatternQuestions.Question;
-import org.hibernate.engine.internal.Collections;
-import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.shortcut.model.Shortcut;
 import com.example.shortcut.service.QuestionService;
 import com.example.shortcut.service.ShortcutService;
+
 
 
 @Controller // このクラスがコントローラーであることを示す
@@ -85,16 +87,16 @@ public class ShortcutController {
 	    if (question != null) {
 	        model.addAttribute("question", question);
 	        // ランダムに選択肢を取得
-	        List<Shortcut> choices = questionService.getRandomChoices(question.getAnswerId(), 2); // 2つの不正解選択肢を取得
+	        List<Shortcut> choices = questionService.getRandomChoices(question.getAnswer_id(), 2); // 2つの不正解選択肢を取得
 	        // 正解選択肢も取得
-	        Shortcut correctChoice = shortcutService.findById(question.getAnswerId());
+	        Shortcut correctChoice = shortcutService.findById(question.getAnswer_id());
 	        // ランダムな選択肢を追加
 	        choices.add(correctChoice);
 	        // 選択肢をシャッフル
 	        Collections.shuffle(choices);
 	        model.addAttribute("choices", choices);
 	    }
-	    return "eclipseQuiz"; 
+	    return "eclipseQuiz";
 	}
 	
 	
@@ -107,7 +109,7 @@ public class ShortcutController {
 	        model.addAttribute("selectedChoice", selectedChoice);
 
 	        // 正解選択肢を取得
-	        Shortcut correctChoice = shortcutService.findById(question.getAnswerId());
+	        Shortcut correctChoice = shortcutService.findById(question.getAnswer_id());
 	        model.addAttribute("correctChoice", correctChoice);
 	        
 	        if (selectedChoice.getId().equals(correctChoice.getId())) {
@@ -119,7 +121,7 @@ public class ShortcutController {
 	        }
 
 	        // 新しい問題と選択肢を取得して再度クイズページを表示
-	        List<Shortcut> choices = questionService.getRandomChoices(question.getAnswerId(), 2);
+	        List<Shortcut> choices = questionService.getRandomChoices(question.getAnswer_id(), 2);
 	        choices.add(correctChoice);
 	        Collections.shuffle(choices);
 	        model.addAttribute("question", question);
