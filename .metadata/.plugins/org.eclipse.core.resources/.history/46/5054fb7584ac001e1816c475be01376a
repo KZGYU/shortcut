@@ -1,9 +1,0 @@
-package com.example.shortcut.service;
-
-import com.example.shortcut.repository.ShortcutRepository;
-
-public class ShortcutService {
-	@Autowired
-	private ShortcutRepository shortcutRepository;
-
-}

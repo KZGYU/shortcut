@@ -1,3 +1,0 @@
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (1, '編集タブの移動', '編集タブに開いている作業中のファイルを選択するポップアップが表示され、他のファイルへ移動することができる', 'Ctrl＋E');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (2, '元の場所に戻る', '前の場所に戻る', 'Alt+←');
-INSERT IGNORE INTO shortcuts (id, name, content, command) VALUES (3, '元の場所から進む', '次に進む', 'Alt+→');

@@ -1,7 +1,0 @@
-package com.example.shortcut.repository;
-
-
-@Repository
-public class ShortcutRepository {
-
-}
